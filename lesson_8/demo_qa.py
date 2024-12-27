@@ -26,5 +26,6 @@ emailInput = driver.find_element("xpath", "(//input[@id='userEmail'])")
 emailInput.clear()
 emailInput.send_keys("test@mail.ru")
 assert emailInput.get_attribute("value") == "test@mail.ru" , f"{emailInput.get_attribute("value")} не является Testovich."
-
-
+genderButton = driver.find_element("xpath", "(//label[@for = 'gender-radio-1'])")
+genderButton.click()
+## Решить с получением значения value от input или просто сделать проверку , что выбран
